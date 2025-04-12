@@ -8,7 +8,7 @@ public class EvaluacionNotas {
         double nota = scanner.nextDouble();
 
         if (nota < 0 || nota > 10) {
-            System.out.println("Nota no válida. Debe estar entre 0 y 10.");
+            System.out.println("Nota no válida.");
         } else if (nota < 5) {
             System.out.println("Suspenso");
         } else if (nota < 6) {
@@ -17,10 +17,17 @@ public class EvaluacionNotas {
             System.out.println("Bien");
         } else if (nota < 9) {
             System.out.println("Notable");
-        } else {
+        } else if (nota < 10) {
             System.out.println("Sobresaliente");
+        } else if (nota == 10) {
+            System.out.println("Excelente, tienes matrícula de honor");
         }
 
         scanner.close();
+    }
+
+    @Override
+    public String toString() {
+        return "EvaluacionNotas []";
     }
 }
